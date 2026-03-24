@@ -1,0 +1,22 @@
+services:
+  table_to_database_cli:
+    build:
+      context: .
+    container_name: table_to_database_cli
+    volumes:
+      - './app:/app'
+      - './tables:/tables'
+      - './scripts:/scripts'
+    environment:
+      - DATABASE_HOST=table_to_database_cli_database
+      - DATABASE_USER=root
+      - DATABASE_PASSWORD=strongpassword
+      - DATABASE_NAME=table_to_database_cli
+    working_dir: /app
+  table_to_database_cli_database:
+    image: 'mysql:latest'
+    container_name: table_to_database_cli_database
+    environment:
+      - MYSQL_ROOT_PASSWORD=strongpassword
+    ports:
+      - '8109:3306'
