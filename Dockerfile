@@ -7,4 +7,5 @@ RUN apt-get install python3-pip -y
 RUN apt-get install git -y
 RUN apt-get install mariadb-client -y
 
-CMD while : ; do sleep 1000; done
+CMD pip3 install -r /app/requirements.txt --break-system-packages \
+    && while : ; do sleep 1000; done

@@ -18,5 +18,7 @@ services:
     container_name: table_to_database_cli_database
     environment:
       - MYSQL_ROOT_PASSWORD=strongpassword
+    volumes:
+      - ./db_data:/var/lib/mysql
     ports:
       - '8109:3306'

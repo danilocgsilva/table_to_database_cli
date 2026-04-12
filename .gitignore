@@ -1,2 +1,3 @@
 app/src/**/*
 tables/**/*
+db_data/**/*
