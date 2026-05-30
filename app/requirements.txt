@@ -1,1 +1,2 @@
--e git+https://github.com/danilocgsilva/table_to_database_core.git@1.2.1#egg=table_to_database
+git+https://github.com/danilocgsilva/table_to_database_core.git@1.2.1#egg=table_to_database
+
